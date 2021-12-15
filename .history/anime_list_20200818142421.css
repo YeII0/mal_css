@@ -1,0 +1,350 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700,900|Vollkorn);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700);
+
+/**
+* Navigation panel
+*/
+
+#mal_control_strip
+{
+    position: sticky !important;
+    left: 0 !important;
+}
+
+/* 
+// Self-explanatory
+*/
+
+*, *::after, *::before
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    min-width: 820px;
+}
+
+body::before
+{
+    content: "";
+    display: block;
+    position: fixed;
+    height: 100vh;
+    min-width: 820px;
+    width: 100vw;
+    top: 0;
+    background: url(https://dl.dropboxusercontent.com/s/rrchar8glzl4jqg/niebo_mal.jpg?dl=0) top right / cover no-repeat;
+    z-index: -1;
+}
+
+body
+{
+    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+    font-size: 12px;	
+    color: #000000;
+    
+}
+
+
+/*
+// Determines the positioning of your list
+*/
+
+#list_surround
+{
+    margin: 0 auto;
+    min-width: 820px;
+	max-width: 1000px;
+}
+
+
+table
+ 
+
+/*
+// All links on your list
+*/
+
+a
+{
+color: #000000;
+text-decoration: none;
+}
+
+a:visited
+{
+color: #000000;
+text-decoration: none;
+}
+
+a:hover
+{
+color: #778899;
+
+}
+		
+		
+	
+	
+
+/*
+// Alternating row color 1 
+*/
+
+.td1
+{
+        
+color: #000000;
+padding: 8px;
+background-color: #ADCEFF ; 
+}
+   
+/*
+// Alternating row color 2 
+*/
+
+.td2
+{
+        
+color: #000000;
+padding: 8px;
+background-color: #99C2FF; 
+}
+		
+/*
+// Box do edycji
+*/		
+
+
+#list_surround .List_LightBox
+{
+padding-left: 15px;
+}
+		
+   
+/*
+// This represents the "Anime Title", "Score", "# Eps" columns 
+*/
+   
+.table_header
+{
+        
+-webkit-border-top-right-radius: 80px; /* prawy gorny */
+-webkit-border-top-left-radius: 80px; /* lewy dolny */
+-k-border-radius-topright: 80px;
+-k-border-radius-topleft: 80px;
+-moz-border-radius-topright: 80px;
+-moz-border-radius-topleft: 80px;
+border-top-right-radius: 80px;
+border-top-left-radius: 80px;		
+				
+				
+				
+        color: #000000;
+        background-color: #5C9DFF;
+        padding: 6px;
+        }
+    
+/*
+// headerLink represents the color of the links inside the_header 
+*/
+	
+.table_headerLink
+{
+color:#FFFFFF ;
+}
+
+.table_headerLink:Visited
+{
+color:#FFFFFF ;
+}
+
+.table_headerLink:Hover
+{
+color: #DBDBDB;
+}
+
+/*
+// Controls the select form decoration (the drop down select box)
+*/
+
+.form
+    {
+    border-width: 1px 1px 1px 1px;
+    border-color: #000000;
+    border-style: solid;
+    color: #000000;
+    padding: 2px;
+    font-size: 11.00px;
+    font-family: Arial;
+    }
+		
+
+/* Which 'status' up top is selected? */
+
+.status_selected
+{
+    -webkit-border-radius: 80px; /* Safari, Chrome */
+	-k-border-radius: 80px;    /* Konqueror */
+	-moz-border-radius: 80px; /* Firefox */
+	border-radius: 80px;
+	color: #000000;
+	padding: 6px;
+    background-color: #ADCEFF;
+	}
+
+.status_not_selected
+{
+	-webkit-border-radius: 80px; /* Safari, Chrome */
+	-k-border-radius: 80px;    /* Konqueror */
+	-moz-border-radius: 80px; /* Firefox */
+	border-radius: 80px;
+	color: #000000;
+    padding: 6px;
+    background-color: #FFFFFF;
+	}
+
+/*
+Header classes for Currently Watching, Completed, Dropped, etc...
+*/
+
+.header_cw td
+{
+	background-image: url("https://dl.dropboxusercontent.com/s/rcnc27x0x6f87ib/ogladane.png?dl=0");
+    background-position: center left;
+    background-repeat: no-repeat;
+	height: 63px;
+
+}
+
+.header_completed
+{
+
+background-image: url("https://dl.dropboxusercontent.com/s/7sffs5v1i7cspr9/obejrzane.png?dl=0");
+    background-position: center left;
+    background-repeat: no-repeat;
+    height: 63px;
+	
+
+}
+
+.header_onhold
+{
+
+background-image: url("https://dl.dropboxusercontent.com/s/8bg9w71ysl9u5j3/wstrzymane.png?dl=0");
+    background-position: center left;
+    background-repeat: no-repeat;
+    height: 63px;
+	
+
+}
+
+.header_dropped
+{
+
+background-image: url("https://dl.dropboxusercontent.com/s/q3xwmzogp0tgvpf/porzucone.png?dl=0");
+    background-position: center left;
+    background-repeat: no-repeat;
+    height: 63px;
+	
+
+}
+
+.header_ptw
+{
+
+background-image: url("https://dl.dropboxusercontent.com/s/ht1vpk24rzzs470/planowane.png?dl=0");
+    background-position: center left;
+    background-repeat: no-repeat;
+    height: 63px;
+	
+
+}
+
+.header_title {
+	display: none;
+}
+
+
+.category_totals
+{   font-weight:400;
+    color:#FFFFFF;
+    height: 33px;
+	font-size: 12.00px;
+	font-family: Arial;
+	background-color: #5C9DFF;
+	text-align: center;
+	padding-top: 25px;
+	display:block;
+	margin-bottom: 64px;
+	-webkit-border-bottom-right-radius: 80px; /* prawy gorny */
+	-webkit-border-bottom-left-radius: 80px; /* lewy dolny */
+	-k-border-radius-bottomright: 80px;
+	-k-border-radius-bottomleft: 80px;
+	-moz-border-radius-bottomright: 80px;
+	-moz-border-radius-bottomleft: 80px;
+	border-bottom-right-radius: 80px;
+	border-bottom-left-radius: 80px;
+	
+}
+
+#grand_totals
+{
+	padding: 0 2rem;
+	text-align:center;
+	color:#000000;
+	font-size:18px; color:#000000;
+	
+	
+}
+	
+
+
+/* header_al is thesurrounding "User's Anime List" at the top */
+
+.header_al
+{
+	font-weight: bold;
+	font-size: 16px;
+}
+
+/* header_al_links is thewith your "Profile" and "MyAnimeList home" links */
+.header_al_links
+{
+
+}
+
+/* controls what styles you can give to all the anime titles in your list */
+.animetitle
+{
+	
+
+       
+}
+
+.animetitle + small {
+    background: none repeat scroll 0 0 #5C9DFF;
+    border-radius: 3px 3px 3px 3px;
+    color: #FFFFFF;
+    font-family: Arial;
+    font-size: 10px;
+    margin-left: 5px;
+    padding: 2px 5px 2px;
+	float: right;
+	
+}
+
+
+
+/*
+copyright contains the "Producted by Garrett Gyssler" text
+DO NOT REMOVE OR HIDE THIS DIV
+IF FOUND TO BE REMOVED, YOUR LIST WILL BE REMOVED TOO
+*/
+
+#copyright
+{   
+    padding: 0 2rem 2rem 2rem;
+	text-align: center;
+}

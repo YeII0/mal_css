@@ -1,0 +1,345 @@
+/* General
+========================================================================== */
+
+*, *::after, *::before
+{
+    box-sizing: border-box;
+}
+
+html
+{
+    font: 62.5% Arial, "Helvetica Neue", Helvetica, sans-serif;	
+}
+
+body
+{
+    color: #000000;
+    min-width: 70rem;
+    line-height: 1.4;
+    font-size: 1.2rem;
+}
+
+body::before
+{
+    content: "";
+    display: block;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    min-width: 70rem;
+    top: 0;
+    background: url(https://dl.dropboxusercontent.com/s/ix3wyx7qs840hu0/shana_mal.jpg?dl=0) top right / cover no-repeat;
+    z-index: -1;
+}
+
+/* Changing score and chapters/eps columns to be relative to root element font size.
+*  Text will not overlap while zooming with that.
+========================================================================== */
+
+/**
+* Score column
+*/
+#list_surround table:nth-of-type(n+3) td:nth-of-type(3)
+{
+    width: 4.5rem;
+}
+
+/**
+* Progress column
+*/
+#list_surround table:nth-of-type(n+3) td:nth-of-type(4)
+{
+    width: 7rem;
+}
+
+
+/* Setting column with title, Airing/Publishing box and edit-more box 
+** to not break when title is to long.
+========================================================================== */
+
+/**
+* Title
+*/
+#list_surround table:nth-of-type(n+4):nth-last-of-type(n+2) td:nth-of-type(2) >
+a
+{   
+    float: left;
+    width: 76.24304267161%;
+    line-height: 1.5;
+}
+
+/**
+* Edit - More box
+*/
+#list_surround table:nth-of-type(n+4):nth-last-of-type(n+2) td:nth-of-type(2) >
+div
+{
+    float: right;
+    width: 9.0760667903%;
+    line-height: 1.8;
+}
+
+/**
+* Airing/Publishing box
+*/
+#list_surround table:nth-of-type(n+4):nth-last-of-type(n+2) td:nth-of-type(2) >
+small
+{   
+    float: right;
+    width: 10.4192949907%;
+    margin-right: 1.48423005565862%;
+}
+
+/* Rest of tweaks
+========================================================================== */
+
+/**
+* Additional width for column with type of anime like: TV, Movies
+* because "Special" type needed more space cuz word overflow default 50px.
+* No need for manga list.
+*/
+/* #list_surround table:nth-of-type(n+4) td:nth-last-of-type(2)
+{
+    width: 5.6rem;
+} */
+
+/**
+* Left padding for second column header to align nicely with anime titles, 
+* also was just too near to edge.
+*/
+td.table_header:nth-of-type(2) a
+{
+    padding-left: 0.8rem;
+}
+
+/* Default selectors given by MAL.
+========================================================================== */
+
+/**
+* Navigation panel
+*/
+
+#mal_control_strip
+{
+    position: sticky !important;
+    left: 0 !important;
+}
+
+/*
+// Determines the positioning of your list
+*/
+
+#list_surround
+{
+    margin: 0 auto;
+	width: 70rem;
+}
+ 
+/*
+// All links on your list
+*/
+
+a
+{
+color: #000000;
+text-decoration: none;
+}
+
+a:visited
+{
+color: #000000;
+text-decoration: none;
+}
+
+a:hover
+{
+color: #3e3e3e;
+
+}
+			
+/*
+// Alternating row color 1 
+*/
+
+.td1
+{
+        
+color: #000000;
+padding: 0.8rem;
+background-color:#FFB2B2; 
+}
+   
+/*
+// Alternating row color 2 
+*/
+
+.td2
+{
+        
+color: #000000;
+padding: 0.8rem;
+background-color: #FF9999;
+}
+		
+/*
+// This represents the "Anime Title", "Score", "# Eps" columns 
+*/
+   
+.table_header
+{
+    border-radius: 1.6rem 1.6rem 0 0;		
+    color: #000000;
+    background-color: #FF3333;
+    line-height: 3;
+}
+    
+/*
+// headerLink represents the color of the links inside the_header 
+*/
+	
+.table_headerLink
+{
+    color:#FFFFFF;
+}
+
+.table_headerLink:Visited
+{
+    color:#FFFFFF;
+}
+
+.table_headerLink:Hover
+{
+    color: #DBDBDB;
+}
+
+/* Which 'status' up top is selected? */
+
+.status_selected
+{
+    border-radius: 1.6rem;
+	color: #000000;
+	padding: 0.6rem;
+    background-color: #FFFFFF;
+}
+
+.status_not_selected
+{
+	border-radius: 1.6rem;
+	color: #000000;
+    padding: 0.6rem;
+    background-color: #D3D3D3;
+}
+
+/*
+Header classes for Currently Watching, Completed, Dropped, etc...
+*/
+
+.header_cw, 
+.header_completed,
+.header_onhold,
+.header_dropped,
+.header_ptw
+{
+    margin: 1.6rem 0 0.8rem 0;
+}
+
+#list_surround .header_title {
+	display: none;
+}
+
+.header_cw td
+{
+    background: url("https://dl.dropboxusercontent.com/s/45kmdwanwixn315/watching.png?dl=0") center left / contain no-repeat;
+    height: 5.6rem;
+}
+
+.header_completed td
+{
+    background: url("https://dl.dropboxusercontent.com/s/5i0x7a29u2f9fbi/completed.png?dl=0") center left no-repeat;
+    height: 5.6rem;
+}
+
+.header_onhold td
+{
+    background: url("https://dl.dropboxusercontent.com/s/d7ozumuc1sqrsvj/on-hold.png?dl=0") center left no-repeat;
+    height: 5.6rem;
+}
+
+.header_dropped td
+{
+    background: url("https://dl.dropboxusercontent.com/s/thfl8hgdhj01vqt/dropped.png?dl=0") center left no-repeat;
+    height: 5.6rem;
+}
+
+.header_ptw td
+{
+    background: url("https://dl.dropboxusercontent.com/s/26ed9vi71r4q2g0/plan_to_watch.png?dl=0") center left no-repeat;
+    height: 5.6rem;
+}
+
+.category_totals
+{ 
+    color:#FFFFFF;
+    line-height: 3;
+	background-color: #FF3333;
+    text-align: center;	
+    border-radius: 0 0 1.6rem 1.6rem;
+}
+
+/* General summary
+========================================================================== */
+
+#grand_totals
+{
+    border-radius: 1.6rem;
+    background-color: #FF3333;
+	padding: 1.6rem;
+	text-align:center;
+	color: white;
+}
+
+#grand_totals::before
+{
+    content: "General summary";
+    display: block;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* header_al is thesurrounding "User's Anime List" at the top */
+
+.header_al
+{
+	font-weight: bold;
+}
+
+/* header_al_links is thewith your "Profile" and "MyAnimeList home" links */
+.header_al_links
+{}
+
+/* controls what styles you can give to all the anime titles in your list */
+.animetitle
+{}
+
+.animetitle + small 
+{
+    background: #FF3333;
+    border-radius: 0.3rem;
+    color: #FFFFFF;
+    font-size: 1rem;
+    padding: 0.2rem 0.5rem 0.2rem;
+    display: block;	
+}
+
+/*
+copyright contains the "Producted by Garrett Gyssler" text
+DO NOT REMOVE OR HIDE THIS DIV
+IF FOUND TO BE REMOVED, YOUR LIST WILL BE REMOVED TOO
+*/
+
+#copyright
+{   
+    padding: 0 3.2rem 3.2rem 3.2rem;
+	text-align: center;
+}
