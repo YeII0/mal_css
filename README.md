@@ -1,1 +1,1 @@
-Custom css styles for mal.
+Custom css styles for myanimelist.
